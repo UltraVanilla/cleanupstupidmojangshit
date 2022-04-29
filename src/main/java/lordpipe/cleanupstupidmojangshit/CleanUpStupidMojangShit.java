@@ -47,8 +47,6 @@ public class CleanUpStupidMojangShit extends JavaPlugin {
                                 SignBlockEntity entity = (SignBlockEntity) craftBlock.getHandle().getBlockEntity(craftBlock.getPosition());
                                 CompoundTag tag = entity.getUpdateTag();
 
-                                System.out.println(tag.toString());
-
                                 if (tag.get("FilteredText1") == null && tag.get("FilteredText2") == null
                                         && tag.get("FilteredText3") == null && tag.get("FilteredText4") == null) {
                                     continue;
@@ -64,8 +62,6 @@ public class CleanUpStupidMojangShit extends JavaPlugin {
                                 entity.saveWithFullMetadata();
 
                                 entity.getLevel().sendBlockUpdated(entity.getBlockPos(), entity.getBlockState(), entity.getBlockState(), 3);
-                                System.out.println(block.getType());
-
                             }
                         }
                     }
