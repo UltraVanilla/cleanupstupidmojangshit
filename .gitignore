@@ -1,4 +1,5 @@
 .settings
+bin/
 # Created by https://www.toptal.com/developers/gitignore/api/vim,java,linux,macos,windows,intellij+all,gradle,metals
 # Edit at https://www.toptal.com/developers/gitignore?templates=vim,java,linux,macos,windows,intellij+all,gradle,metals
 
