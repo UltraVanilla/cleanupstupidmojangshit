@@ -4,6 +4,8 @@ A spigot plugin to remove broken FilteredText NBT data from signs.
 
 To use, just install and walk near (within 8 blocks radius of) any signs that are broken. They will automatically fix themselves.
 
+Make sure you're using the latest PaperMC version before using, else more bad data may be created.
+
 ## License
 
 Licensed under GPLv3
