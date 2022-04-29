@@ -1,48 +1,33 @@
-import net.minecrell.pluginyml.bukkit.BukkitPluginDescription
-
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 plugins {
     `java-library`
-    id("io.papermc.paperweight.userdev") version "1.3.6"
-    id("xyz.jpenilla.run-paper") version "1.0.6"
-    id("net.minecrell.plugin-yml.bukkit") version "0.5.1"
+    id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 group = "lordpipe.cleanupstupidmojangshit"
 version = "1.0.0"
 description = "Plugin to remove broken FilteredText NBT data from signs"
 
-repositories {
-    mavenCentral()
-    maven { url = uri("https://papermc.io/repo/repository/maven-public/") }
-}
-
 dependencies {
-    paperDevBundle("1.18.2-R0.1-SNAPSHOT")
+    implementation(project(":common"))
+    implementation(files("1_18_R1/build/libs/1_18_R1-unspecified.jar"))
+    implementation(files("1_18_R2/build/libs/1_18_R2-unspecified.jar"))
 }
 
 java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 }
+tasks {
+    named<ShadowJar>("shadowJar") {
+        dependsOn(":1_18_R1:reobfJar")
+        dependsOn(":1_18_R2:reobfJar")
+        mergeServiceFiles()
+    }
+}
 
 tasks {
-    assemble {
-        dependsOn(reobfJar)
-    }
-    compileJava {
-        options.encoding = Charsets.UTF_8.name()
-        options.release.set(17)
-    }
-    javadoc {
-        options.encoding = Charsets.UTF_8.name()
-    }
-    processResources {
-        filteringCharset = Charsets.UTF_8.name()
+    build {
+        dependsOn(shadowJar)
     }
 }
 
-bukkit {
-    load = BukkitPluginDescription.PluginLoadOrder.STARTUP
-    main = "lordpipe.cleanupstupidmojangshit.CleanUpStupidMojangShit"
-    apiVersion = "1.18"
-    authors = listOf("lordpipe")
-}
