@@ -27,7 +27,7 @@ public class CleanUpStupidMojangShit extends JavaPlugin implements Listener {
         NBTRemover nbtRemover = null;
         for (String version : SUPPORTED_VERSION) {
             try {
-                //Check NMS version
+                // Check NMS version
                 Class.forName("org.bukkit.craftbukkit." + version + ".block.CraftBlock").getName();
                 nbtRemover = (NBTRemover) Class.forName("lordpipe.cleanupstupidmojangshit." + version + ".NBTRemover").getConstructor().newInstance();
             } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException ignored) {
