@@ -1,4 +1,5 @@
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
 plugins {
     `java-library`
     id("com.github.johnrengelman.shadow") version "7.1.2"
@@ -32,4 +33,3 @@ tasks {
         dependsOn(shadowJar)
     }
 }
-

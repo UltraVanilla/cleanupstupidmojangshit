@@ -15,7 +15,7 @@ public class NBTRemover implements lordpipe.cleanupstupidmojangshit.NBTRemover {
         CompoundTag tag = entity.getUpdateTag();
 
         if (tag.get("FilteredText1") == null && tag.get("FilteredText2") == null
-                && tag.get("FilteredText3") == null && tag.get("FilteredText4") == null) {
+            && tag.get("FilteredText3") == null && tag.get("FilteredText4") == null) {
             return;
         }
 
