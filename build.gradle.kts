@@ -12,6 +12,7 @@ dependencies {
     implementation(project(":common"))
     implementation(files("1_18_R1/build/libs/1_18_R1-unspecified.jar"))
     implementation(files("1_18_R2/build/libs/1_18_R2-unspecified.jar"))
+    implementation(files("1_17_R1/build/libs/1_17_R1-unspecified.jar"))
 }
 
 java {
@@ -21,6 +22,7 @@ tasks {
     named<ShadowJar>("shadowJar") {
         dependsOn(":1_18_R1:reobfJar")
         dependsOn(":1_18_R2:reobfJar")
+        dependsOn(":1_17_R1:reobfJar")
         mergeServiceFiles()
     }
 }

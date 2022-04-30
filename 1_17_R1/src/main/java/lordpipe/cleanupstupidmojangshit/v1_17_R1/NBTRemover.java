@@ -1,9 +1,9 @@
-package lordpipe.cleanupstupidmojangshit.v1_18_R1;
+package lordpipe.cleanupstupidmojangshit.v1_17_R1;
 
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
 import org.bukkit.block.Block;
-import org.bukkit.craftbukkit.v1_18_R1.block.CraftBlock;
+import org.bukkit.craftbukkit.v1_17_R1.block.CraftBlock;
 
 public class NBTRemover implements lordpipe.cleanupstupidmojangshit.NBTRemover {
 

@@ -25,7 +25,7 @@ public class NBTRemover implements lordpipe.cleanupstupidmojangshit.NBTRemover {
 
         entity.load(tag);
 
-        entity.saveWithFullMetadata();
+        entity.setChanged();
 
         entity.getLevel().sendBlockUpdated(entity.getBlockPos(), entity.getBlockState(), entity.getBlockState(), 3);
 

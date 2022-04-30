@@ -15,7 +15,7 @@ dependencies {
 bukkit {
     load = BukkitPluginDescription.PluginLoadOrder.STARTUP
     main = "lordpipe.cleanupstupidmojangshit.CleanUpStupidMojangShit"
-    apiVersion = "1.18"
+    apiVersion = "1.17"
     authors = listOf("lordpipe")
 }
 
