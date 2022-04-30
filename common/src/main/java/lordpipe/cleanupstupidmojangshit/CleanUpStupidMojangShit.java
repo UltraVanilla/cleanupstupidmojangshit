@@ -16,7 +16,7 @@ import java.util.logging.Level;
 /**
  * Plugin to remove broken FilteredText tags on signs
  *
- * @author Copyright (c) lordpipe. Licensed GPLv3
+ * @author Copyright (c) lordpipe, sandtechnology, and contributors. Licensed GPLv3
  */
 public class CleanUpStupidMojangShit extends JavaPlugin implements Listener {
 

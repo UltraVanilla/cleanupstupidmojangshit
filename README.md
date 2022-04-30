@@ -22,7 +22,7 @@ On 2022 April 28, Mojang seems to have pushed out a change to everyone's account
 
 Licensed under GPLv3
 
-Copyright (c) 2021 lordpipe
+Copyright (c) 2021 lordpipe, sandtechnology, and contributors
 
 ### Contributing
 

@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "lordpipe.cleanupstupidmojangshit"
-version = "1.0.0"
+version = "1.1.0"
 description = "Plugin to remove broken FilteredText NBT data from signs"
 
 dependencies {
